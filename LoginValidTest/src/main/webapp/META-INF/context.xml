@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		localDataSource="true" dataSourceName="jdbc/TestDB" userTable="users"
+		userNameCol="userName" userCredCol="password" userRoleTable="users"
+		roleNameCol="roleName" />
+
+	<Resource name="jdbc/TestDB" auth="Container"
+		type="javax.sql.DataSource" maxActive="100" minIdle="10"
+		maxWait="10000" initialSize="10" username="AdminTest"
+		password="123456" driverClassName="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/tomcatTest?serverTimeZone=Asia/Taipei" />
+</Context>
